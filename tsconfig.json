@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "skipLibCheck": true,
+    "module": "commonjs",
+    "jsx": "react-jsx",
+    "outDir": "./lib",
+    "strict": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  },
+  "include": ["./src"],
+  "exclude": [
+    "**/node_modules/**",
+    "**/lib/**",
+    "**/coverage/**",
+    "**/demos/**"
+  ]
+}

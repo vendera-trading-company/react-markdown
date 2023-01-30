@@ -1,0 +1,80 @@
+{
+  "name": "vendera-trading-company-react-markdown",
+  "keywords": [
+    "vendera-trading-company",
+    "react",
+    "react-native",
+    "expo"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vendera-trading-company/react-markdown.git"
+  },
+  "version": "1.0.0",
+  "author": {
+    "email": "faruk.ertuerk@vendera-trading.company",
+    "name": "Faruk Ertürk"
+  },
+  "homepage": "https://vendera-trading.company",
+  "sponsor": {
+    "url": "https://vendera-trading.company"
+  },
+  "license": "MIT",
+  "private": false,
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "format": "prettier --write src/**/*.{ts,tsx}",
+    "lint": "eslint --fix src/**/*.{ts,tsx}",
+    "prepare": "npm run build",
+    "version": "npm run format && git add -A src",
+    "test": "jest --no-watchman",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "setupFiles": [
+      "./setup-test.ts"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "ts",
+      "tsx"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
+    },
+    "testMatch": [
+      "**/*.test.ts?(x)"
+    ],
+    "coveragePathIgnorePatterns": [
+      "./src/__tests__/"
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/jest": "^26.0.24",
+    "@types/react": "18.0.0",
+    "@types/react-native": "^0.69.5",
+    "@types/react-test-renderer": "18.0.0",
+    "babel-preset-expo": "^9.2.0",
+    "coveralls": "^3.1.1",
+    "eslint": "8.22.0",
+    "eslint-config-airbnb-typescript-prettier": "^5.0.0",
+    "jest": "^26.0.24",
+    "jest-expo": "^46.0.0",
+    "prettier": "^2.7.1",
+    "react": "18.0.0",
+    "react-native": "^0.69.5",
+    "react-native-gesture-handler": "^2.5.0",
+    "react-test-renderer": "18.0.0",
+    "typescript": "4.4.4"
+  },
+  "dependencies": {}
+}
